@@ -137,13 +137,15 @@
                 <div class="certificate-category">
                     <h3>奖学金证书</h3>
                     <div class="certificate-grid">
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('交大奖学金.jpg', '交大奖学金')">
                             <h4>长江思源奖学金</h4>
                             <p>长江思源科技创新奖学金</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('交大奖学金.jpg', '交大奖学金')">
                             <h4>交大奖学金</h4>
                             <p>本科生优秀奖学金</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                     </div>
                 </div>
@@ -151,25 +153,30 @@
                 <div class="certificate-category">
                     <h3>比赛证书</h3>
                     <div class="certificate-grid">
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('IE亮剑三等奖.jpg', 'IE亮剑比赛三等奖')">
                             <h4>全国工业工程专业优秀课程设计竞赛</h4>
                             <p>全国特等奖</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('IE亮剑排名.png', 'IE亮剑比赛排名')">
                             <h4>中国大学生工业工程与精益管理创新赛</h4>
                             <p>全国一等奖</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('IE亮剑三等奖.jpg', 'IE亮剑比赛三等奖')">
                             <h4>IE亮剑比赛</h4>
                             <p>三等奖</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('三下乡社会实践三等奖.jpg', '三下乡社会实践三等奖')">
                             <h4>三下乡社会实践</h4>
                             <p>三等奖</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('天大.jpg', '天津大学丰田杯')">
                             <h4>天津大学丰田杯</h4>
                             <p>参赛证书</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                     </div>
                 </div>
@@ -177,21 +184,25 @@
                 <div class="certificate-category">
                     <h3>荣誉证书</h3>
                     <div class="certificate-grid">
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('交大战疫校长奖.jpg', '交大战疫校长奖')">
                             <h4>优秀团员</h4>
                             <p>校优秀团员</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('交大战疫校长奖.jpg', '交大战疫校长奖')">
                             <h4>交大战疫校长奖</h4>
                             <p>疫情防控贡献奖</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('127周年校庆志愿者.jpg', '127周年校庆志愿者')">
                             <h4>127周年校庆志愿者</h4>
                             <p>志愿者证书</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
-                        <div class="certificate-item">
+                        <div class="certificate-item" onclick="openCertificateModal('疫情防控志愿者时长证书.jpg', '疫情防控志愿者时长证书')">
                             <h4>疫情防控志愿者</h4>
                             <p>时长证书</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                     </div>
                 </div>
@@ -202,10 +213,12 @@
                         <div class="certificate-item">
                             <h4>数学竞赛证书</h4>
                             <p>参赛证书</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                         <div class="certificate-item">
                             <h4>上海市大学生安全教育</h4>
                             <p>结业证书</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                     </div>
                 </div>
@@ -216,20 +229,34 @@
                         <div class="certificate-item">
                             <h4>雅思证书</h4>
                             <p>总分7.0</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                         <div class="certificate-item">
                             <h4>大学英语六级</h4>
                             <p>624分</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                         <div class="certificate-item">
                             <h4>大学英语四级</h4>
                             <p>合格证书</p>
+                            <span class="click-hint">点击查看证书</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- 证书模态框 -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCertificateModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="证书图片">
+            </div>
+        </div>
+    </div>
 
     <section id="contact">
         <div class="container">
@@ -254,6 +281,31 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // 打开证书模态框
+        function openCertificateModal(imageName, title) {
+            const modal = document.getElementById('certificateModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalTitle.textContent = title;
+            modalImage.src = `certificates/${imageName}`;
+            modal.style.display = 'flex';
+        }
+        
+        // 关闭证书模态框
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.style.display = 'none';
+        }
+        
+        // 点击模态框外部关闭
+        window.onclick = function(event) {
+            const modal = document.getElementById('certificateModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
